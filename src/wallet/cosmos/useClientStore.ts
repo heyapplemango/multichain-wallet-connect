@@ -22,7 +22,7 @@ type CosmjsClientState = {
 
 const initialClients = {} as Record<CosmosChainIds, ChainClientState>;
 cosmosChainIds.forEach((chainId) => {
-  initialClients[chainId] = { client: null, address: "" };
+  initialClients[chainId] = { client: null, address: `` };
 });
 
 const useClientStore = create<CosmjsClientState>((set, get) => ({
@@ -33,7 +33,7 @@ const useClientStore = create<CosmjsClientState>((set, get) => ({
         const signer = await useKeplrStore.getState().getSigner(chainId);
         const client = await SigningStargateClient.connectWithSigner(
           cosmosChainConfig[chainId].rpc,
-          signer
+          signer,
         );
         const address = (await signer.getAccounts())[0].address;
         set((state) => ({
