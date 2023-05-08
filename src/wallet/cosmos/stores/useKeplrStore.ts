@@ -1,8 +1,8 @@
 import { create } from "zustand";
 import { OfflineSigner } from "@cosmjs/proto-signing";
 import { getKeplrFromWindow } from "@keplr-wallet/stores";
-import { cosmosChainIds } from "../../config/cosmos/cosmosChainConfig";
-import { getLocalStorageValue, setLocalStorageValue } from "../../util/useLocalStorage";
+import { cosmosChainIds } from "../../../config/cosmos/cosmosChainConfig";
+import { getLocalStorageValue, setLocalStorageValue } from "../../../util/useLocalStorage";
 
 type KeplrState = {
   enabled: boolean;

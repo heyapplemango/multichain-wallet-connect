@@ -15,6 +15,7 @@ export const useMetamask = () => {
       }),
     [],
   );
+  
 
   const context = useWeb3React<Web3Provider>();
   const { activate, deactivate, active } = context;

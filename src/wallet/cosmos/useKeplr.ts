@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from "react";
-import useClientStore from "./useClientStore";
-import useKeplrStore from "./useKeplrStore";
+import useClientStore from "./stores/useClientStore";
+import useKeplrStore from "./stores/useKeplrStore";
 
 export const useKeplr = () => {
   const context = useKeplrStore();

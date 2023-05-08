@@ -4,7 +4,7 @@ import {
   cosmosChainConfig,
   CosmosChainIds,
   cosmosChainIds,
-} from "../../config/cosmos/cosmosChainConfig";
+} from "../../../config/cosmos/cosmosChainConfig";
 import useKeplrStore from "./useKeplrStore";
 
 type ChainClientState = {

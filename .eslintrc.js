@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["react", "@typescript-eslint", "react-hooks", "import"],
+  plugins: ["react", "@typescript-eslint", "react-hooks", "import", "unused-imports"],
   extends: [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -14,6 +14,8 @@ module.exports = {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["error"],
     "react-hooks/exhaustive-deps": ["error"],
+    "import/no-unused-modules": "error",
+    "unused-imports/no-unused-imports": "error",
   },
   overrides: [
     {
@@ -33,7 +35,7 @@ module.exports = {
             avoidEscape: true,
           },
         ],
-        "react/jsx-curly-brace-presence": [1, { props: "never", children: "never" }],
+        "react/jsx-curly-brace-presence": [1, { props: "always", children: "never" }],
       },
     },
   ],
